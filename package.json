@@ -1,0 +1,51 @@
+{
+  "name": "dsh-web-qa-preset",
+  "version": "0.1.0",
+  "description": "Read-only web Q&A agent preset bundle for DeepSeek Harness (DSH): search-first answers, source citations, local read-only context, and next-step suggestions.",
+  "type": "module",
+  "main": "guard.mjs",
+  "exports": {
+    ".": "./guard.mjs",
+    "./guard": "./guard.mjs",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "guard.mjs",
+    "cordis.patch.yml",
+    "README.md",
+    "README.zh-CN.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "check": "node --check guard.mjs",
+    "test": "node --test test/guard.test.mjs",
+    "test:node": "node test/guard.test.mjs"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "keywords": [
+    "dsh-plugin",
+    "deepseek-harness",
+    "dsh",
+    "agent-preset",
+    "web-qa",
+    "web-search",
+    "read-only"
+  ],
+  "author": "xiaoxiaosrm",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xiaoxiaosrm/dsh-web-qa-preset.git"
+  },
+  "homepage": "https://github.com/xiaoxiaosrm/dsh-web-qa-preset#readme",
+  "bugs": {
+    "url": "https://github.com/xiaoxiaosrm/dsh-web-qa-preset/issues"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
